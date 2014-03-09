@@ -6,26 +6,22 @@
 
 package hello.world;
 
-import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+
+
 
 
 public class HelloWorld 
 {
-
-    
+   
+    //start up method that sets the parameters for the gui window
     public static void main(String[] args) 
     {
-        String first;
-        String last;
-        
-        first = JOptionPane.showInputDialog("Enter your first name");
-        
-        last = JOptionPane.showInputDialog("Enter your last name" );
-        
-        UserInterface ui = new UserInterface(first, last);
-        
-        JOptionPane.showMessageDialog(null, "Hello " + ui.getFirst() + " " + ui.getLast());
-        
-    }
+        GuiInterface gui = new GuiInterface();
+        gui.setTitle("Hello World");
+        gui.setSize(600, 100);
+        gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gui.setVisible(true);
+}
     
 }
